@@ -14,7 +14,8 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
   </view>
-
+   
+  <view><button>CLICLME</button></view>
 
   <!-- 上传图片 -->
   <view class="uploader">
