@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <view class="container">
 
+<!-- zyy github test -->
+<view>
+  <text>zyy's github</text>
+</view>
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
