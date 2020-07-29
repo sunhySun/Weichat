@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
 
-  <!--zyy github test-->
-  <view>
-    <button>zyy github</button>
-  </view>
+<!-- zyy dev-->
+<view>
+  <text>zyy dev</text>
+</view>
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
@@ -18,9 +18,7 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
   </view>
-   
-  <view><button>CLICLME</button></view>
-
+  
   <!-- 上传图片 -->
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
