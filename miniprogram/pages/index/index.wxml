@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
 
-  <!-- 用户 openid -->
+  <!-- 用户 openid
   <view class="userinfo">
     <button 
       open-type="getUserInfo" 
@@ -14,47 +14,67 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
   </view>
-   
-  <view><button>CLICLME</button></view>
-
+    -->
   <!-- 上传图片 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
       <text>上传图片</text>
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
-  </view>
+  </view> -->
 
 
   <!-- 操作数据库 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
       <text>前端操作数据库</text>
     </navigator>
-  </view>
+  </view> -->
 
   <!-- 即时通信 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <navigator url="../im/im" open-type="navigate" class="uploader-text">
       <text>即时通信 Demo</text>
     </navigator>
-  </view>
+  </view> -->
 
   <!-- 新建云函数 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
       <text>快速新建云函数</text>
     </navigator>
-  </view>
+  </view> -->
 
   <!-- 云调用 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
       <text>云调用</text>
     </navigator>
+  </view> -->
+  <view class = "learningSets">
+    <view class = "tab">
+      <view style = "height:30px;width:23%;color:gray;font-size:16px;margin-top:20px;margin-left:20px;display:inline-block">49个词语  |</view>
+      <view style = "height:30px;width:40%;color:black;font-size:16px;margin-top:20px;display:inline-block">ShenDanning</view>
+      <view style = "height:50px;width:80%;font-size:28px;font-family:Arial;font-weight:600;margin-left:20px">恋恋有词U4</view>
+    </view>
   </view>
+    <view class = "learningSets">
+    <view class = "tab">
+      <view style = "height:30px;width:23%;color:gray;font-size:16px;margin-top:20px;margin-left:20px;display:inline-block">189个词语  |</view>
+      <view style = "height:30px;width:40%;color:black;font-size:16px;margin-top:20px;display:inline-block">ShenDanning</view>
+      <view style = "height:50px;width:80%;font-size:28px;font-family:Arial;font-weight:600;margin-left:20px">恋恋有词U3</view>
+    </view>
+    </view>
+   <view class = "learningSets">
+    <view class = "tab">
+      <view style = "height:30px;width:23%;color:gray;font-size:16px;margin-top:20px;margin-left:20px;display:inline-block">138个词语  |</view>
+      <view style = "height:30px;width:40%;color:black;font-size:16px;margin-top:20px;display:inline-block">ShenDanning</view>
+      <view style = "height:50px;width:80%;font-size:28px;font-family:Arial;font-weight:600;margin-left:20px">恋恋有词U2</view>
+    </view>
+    </view>
 
+  
 
 </view>

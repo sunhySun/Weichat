@@ -18,9 +18,36 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "WORD CARDS",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/coverhome.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": ""
+      },
+      {
+        "selectedIconPath": "images/addselect.png",
+        "iconPath": "images/add.png",
+        "pagePath": "pages/index/index",
+        "text": ""
+      },
+      {
+        "selectedIconPath": "images/myselect.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/index/index",
+        "text": ""
+      }
+   
+    ]
+  }
 }
