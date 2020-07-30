@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<!--添加数据-->
+<view class="btn-area">
+  <input placeholder="单词" bindinput="add_word"></input>
+  <input placeholder="含义" bindinput="add_meaning"> </input>
+  <button bindtap="addWord">添加数据 </button>
+  <button bindtap="selectword">查询数据</button>
+ <view class="text-box">
+         <text>{{result}}</text>
+  </view>
+  <button bindtap="delword">删除数据</button>
+  <button bindtap="renewword">更新数据</button>
+ 
+</view>
