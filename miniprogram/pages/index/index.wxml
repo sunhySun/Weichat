@@ -1,10 +1,6 @@
 <!--index.wxml-->
 <view class="container">
 
-<!-- zyy dev-->
-<view>
-  <text>zyy dev</text>
-</view>
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
