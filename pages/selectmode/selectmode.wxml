@@ -1,0 +1,13 @@
+<!--pages/selectmode/selectmode.wxml-->
+<view>
+    <i-icon type="return" size="35" color="#80848f" bindtap="back"/>
+    <text style="font-size:18px;color:#322c2c;vertical-align:middle" bindtap="back">返回</text>
+</view>
+<view class="selecthead">
+    <text>选择模式</text>
+</view>
+<view class="selectarea">
+    <button id="cardBtn" bindtap="flashcard" type="primary">flashcard</button>
+ 
+    <button id="testBtn" bindtap="test" type="primary">测验</button>
+</view>

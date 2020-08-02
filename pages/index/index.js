@@ -2,7 +2,7 @@
 //获取应用实例
 
 
-const db=wx.cloud.database().collection('test_word')
+const db=wx.cloud.database().collection('Words')
 let word=""
 let meaning=""
 let id=""
@@ -12,7 +12,6 @@ Page({
     canAdd: true,
     canRemove: false
   },
-
   add_word(event)
   {
     word=event.detail.value
@@ -22,13 +21,14 @@ Page({
     meaning=event.detail.value
   },
 
-
   //添加数据
   addWord(){
       db.add({
         data:{
-          word:word,
-          meaning:meaning
+          cardId:"2",
+          word:"sad",
+          meaning:"难过",
+          wnumber:"4",
         },
         success:function(res){
           console.log("添加成功",res)
@@ -40,7 +40,7 @@ Page({
   selectword(){
     var that = this;
     db.where({
-      word:"apple"
+      cardId:"2"
     })
 
     .get({

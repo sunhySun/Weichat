@@ -1,0 +1,29 @@
+/* pages/selectmode/selectmode.wxss */
+.selecthead{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    padding-top:30%;
+    font-size:35px;
+    color: #4c4242;
+}
+.selectarea{
+    margin-top: 20%;
+}
+#cardBtn{
+    width: 70%;
+    background-color:#2d8cf0;
+    font-size:25px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    font-weight: lighter;
+}
+#testBtn{
+    width: 70%;
+    background-color:#2d8cf0;
+    font-size:25px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    font-weight: lighter;
+}
