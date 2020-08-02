@@ -50,7 +50,7 @@
 
 
 .xin-list .single{
-    transition: all 4s;
+    transition: all 0.5s;
     overflow: hidden;
     border-radius: 1px;
     margin-top:15%;

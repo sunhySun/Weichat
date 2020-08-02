@@ -11,7 +11,7 @@
 <view class="cards">
     <view class="border"></view>
     <view class="xin-list" bindtap="turnCard">
-        <block wx:for="{{xinList}}" wx:key="key" wx:for-index="cardIdx">
+        <block wx:for="{{xinList}}" wx:key="key" wx:for-index="idx">
         <view class="single" style="opacity:{{item.display}};transform: translateX({{item.slateX}}) scale({{item.scale}});z-index:{{item.zIndex}};transform-origin: 100% 50% 0;{{item.style}}" >
             <view class="word">
              <text>{{item.word}}</text>
