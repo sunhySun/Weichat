@@ -1,0 +1,31 @@
+<view>
+    <i-icon type="return" size="35" color="#80848f" bindtap="back"/>
+    <text style="font-size:18px;color:#322c2c;vertical-align:middle" bindtap="back">返回</text>
+</view>
+<view class="count">
+    <text>{{learned}}/{{total}}</text>
+</view>
+<i-modal visible="{{ visible2 }}" bind:ok="review" bind:cancel="handleClose2">
+    <view>是否再来一次</view>
+</i-modal>
+<view class="cards">
+    <view class="border"></view>
+    <view class="xin-list" bindtap="turnCard">
+        <block wx:for="{{xinList}}" wx:key="key" wx:for-index="idx">
+        <view class="single" style="opacity:{{item.display}};transform: translateX({{item.slateX}}) scale({{item.scale}});z-index:{{item.zIndex}};transform-origin: 100% 50% 0;{{item.style}}" >
+            <view class="word">
+             <text>{{item.word}}</text>
+            </view>
+           <view class="meaning">
+            <text>{{meaning}}</text>
+           </view>
+        </view>
+        </block>
+    </view>
+</view>
+<view class="choose"> 
+    <view class="btns">
+        <button id="knowBtn" bindtap="know" type="primary">认识</button>
+        <button id="unknowBtn" bindtap="unknow" type="primary">不认识</button>
+    </view>
+</view>

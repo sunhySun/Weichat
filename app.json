@@ -1,14 +1,45 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/index/index","pages/detailPage/main/main","pages/login_test/login_test",
+    "pages/detailPage/editCardSet/editCardSet",
+    
+    "pages/logs/logs",
+    "pages/detailPage/editWord/editWord",
+    "pages/detailPage/addWord/addWord",
+    "pages/welcome/welcome",
+    "pages/my/my"
+    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/addselect.png",
+        "iconPath": "pages/images/add.png",
+        "pagePath": "pages/index/index",
+        "text": ""
+      },
+      {
+        "selectedIconPath": "pages/images/coverhome.png",
+        "iconPath": "pages/images/home.png",
+        "pagePath": "pages/welcome/welcome",
+        "text": ""
+      },
+      {
+        "selectedIconPath": "pages/images/myselect.png",
+        "iconPath": "pages/images/my.png",
+        "pagePath": "pages/my/my",
+        "text": ""
+      }
+    ]
+  }
 }

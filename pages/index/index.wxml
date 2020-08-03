@@ -1,14 +1,36 @@
 <!--index.wxml-->
-<!--添加数据-->
-<view class="btn-area">
-  <input placeholder="单词" bindinput="add_word"></input>
-  <input placeholder="含义" bindinput="add_meaning"> </input>
-  <button bindtap="addWord">添加数据 </button>
-  <button bindtap="selectword">查询数据</button>
- <view class="text-box">
-         <text>{{result}}</text>
-  </view>
-  <button bindtap="delword">删除数据</button>
-  <button bindtap="renewword">更新数据</button>
- 
+<!-- <view class="container"> -->
+<view>
+
+    <view class = "titleview"> 
+
+    <text class = "title"  style = "float:left">我的卡片集</text>
+     <i-icon type="add" size="28" color="#80848f"  bind:tap="handleOpen1" style="margin-left:20px;display:inline-block;justify-content: center;float:left"/></view>
+     
+    <i-modal title="添加卡片集" visible="{{visible1}}" bind:ok="add" bind:cancel="handleClose1">
+    <!-- <i-panel title="无标题输入框"> -->
+    
+    <input name = "input" bindinput="getInput" maxlength="20" placeholder="请输入卡片集名称" />
+    <!-- </i-panel> -->
+    <!-- </form> -->
+    </i-modal>
+    <!-- <i-message id="message" /> -->
+    
+    
+    <view class = "learningSets" wx:for="{{item}}" wx:for-item="item" >
+    <view class = "tab" >
+      <view class = "vocanumber">{{item.wholenum}}个词语  |</view>
+      <view class = "username">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text></view>
+      <view class = "cardstitle" style="display:inline-block">{{item.cardName}}</view>
+      
+      <!-- 跳转至该卡片集合 -->
+      <navigator url="'/pages/detailPage/main/main?cardId='+'{{item.cardId}}'" style="margin-right:20px;display:inline-block;justify-content: center;float:right" ><image style="height:25px;width:20px" src = "../images/right.png" data-index="{{index}}" bindtap="gotoNextPage"/></navigator>
+    </view>
+    </view>
+    
+
+
+
+    
 </view>

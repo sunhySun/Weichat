@@ -1,0 +1,32 @@
+<!--pages/detailPage/editWord/editWord.wxml-->
+<view style="background-color:white">
+  <i-row>
+    <i-col span="8" offset="2" i-class="col-class">
+      <i-icon type="return" bind:tap="return"></i-icon>
+    </i-col>
+    <i-col span="8" i-class="col-class">
+      <text class="title-font">{{cardName}}</text>
+    </i-col>
+  </i-row>
+</view>
+
+<view>
+  <i-row i-class="word_row">
+    <i-col span="4" offset="1" i-class="col-class word_col">
+      <text>单词</text>
+    </i-col>
+    <i-col span="19" i-class="col-class">
+      <input value="{{word}}" placeholder="请输入单词" class="word_input" bindinput="editWord"/>
+    </i-col>
+  </i-row>
+  <i-row i-class="word_row">
+    <i-col span="4" offset="1" i-class="col-class word_col">
+      <text>释义</text>
+    </i-col>
+    <i-col span="19" i-class="col-class">
+      <textarea value="{{meaning}}" placeholder="请输入释义" class="word_textarea" bindinput="editMeaning"></textarea>
+    </i-col>
+  </i-row>
+  <text>\n</text>
+  <button class="myButton" bindtap="submitEditWord">确定</button>
+</view>

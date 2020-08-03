@@ -1,0 +1,102 @@
+<!--pages/detailPage/editCardSet/editCardSet.wxml-->
+<!--pages/detailPage/main.wxml-->
+<view >
+  
+</view> 
+
+<!-- <view class="i-sticky-demo">
+  <i-sticky scrollTop="{{scrollTop}}">
+    <i-sticky-item i-class="i-sticky-demo-title">
+      <view slot="title" >
+        <view style="background-color:white;width:100%">
+          <i-row>
+            <i-col span="8" offset="2" i-class="col-class">
+              <i-icon type="return" bind:tap="confirm"></i-icon>
+            </i-col>
+            <i-col span="8" i-class="col-class">
+              <text class="title-font">{{cardName}}</text>
+            </i-col>
+           
+          </i-row>
+          <i-row >
+            <i-col span="14" offset="1" i-class="col-class">
+              <text>创建时间：{{cardTime}}</text>
+            </i-col>
+            <i-col span="8" i-class="col-class text-left">
+              <text>单词总数：{{wholeNum}}</text>
+            </i-col>
+          </i-row>
+        </view>
+        
+      </view>
+      <view slot="content" >
+        <text>\n\n</text>
+        <i-cell-group wx:for="{{array}}">
+          <i-cell>
+          <view style="float:left">
+            <i-row>{{item.word}}</i-row>
+            <i-row>{{item.meaning}}</i-row>
+          </view>
+          <view style="float:right">
+            <i-icon type="brush" size="28" data-index="{{index}}" bind:tap="editWord"></i-icon>
+            <i-icon type="close" size="28" data-index="{{index}}" bind:tap="delWord"></i-icon>
+          </view>
+          </i-cell>
+        </i-cell-group>
+      </view>
+      
+    </i-sticky-item>
+  </i-sticky>
+</view> -->
+
+<!--占用顶部导航条覆盖的位置，保证正文内容不被遮盖-->
+<view>
+  <i-row i-class="title-row" />
+  <i-row i-class="title-row" />
+  <view class="divLine" />
+</view>
+
+<view>
+<i-cell-group wx:for="{{array}}">
+          <i-cell i-class="word_row">
+          <view style="float:left">
+            <i-row>{{item.word}}</i-row>
+            <i-row>{{item.meaning}}</i-row>
+          </view>
+          <view style="float:right">
+            <i-icon type="brush" size="28" data-index="{{index}}" bind:tap="editWord"></i-icon>
+            <i-icon type="close" size="28" data-index="{{index}}" bind:tap="delWord"></i-icon>
+          </view>
+          </i-cell>
+        </i-cell-group>
+</view>
+
+<!--顶部导航条-->
+<view class="title-bar">
+  <i-row i-class="title-row">
+    <i-col span="8" offset="2" i-class="col-class">
+      <i-icon type="return" bind:tap="confirm"></i-icon>
+    </i-col>
+    <i-col span="8" i-class="col-class">
+      <text class="title-font">{{cardName}}</text>
+    </i-col>
+  </i-row>
+  <i-row i-class="title-row">
+    <i-col span="14" offset="1" i-class="col-class">
+      <text>创建时间：{{cardTime}}</text>
+    </i-col>
+    <i-col span="8" i-class="col-class text-left">
+      <text>单词总数：{{wholeNum}}</text>
+    </i-col>
+  </i-row>
+  <view class="divLine" />
+</view>
+
+<i-modal title="删除卡片集" visible="{{delWordVisible}}" actions="{{delWordAction}}"  bind:click="delWordClick">
+  <view>删除后无法恢复</view>
+</i-modal>
+
+<view>
+  <button class="myButton_add" bindtap="addWord">添加单词</button>
+  <button class="myButton_confirm" bindtap="confirm">修改完毕</button>
+</view>

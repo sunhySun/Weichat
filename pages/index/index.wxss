@@ -19,3 +19,64 @@
 .usermotto {
   margin-top: 200px;
 }
+.learningSets {
+  /* display: flex; */
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  
+}
+.tab {
+  /* display: flex; */
+  /* justify-content: center; */
+  background: #E2E3E5;
+  height: 200rpx;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 40rpx;
+  width: 90%;
+  box-shadow:5px 5px 5px 5px #F0F0F0;
+  border-radius: 15px;
+}
+
+.title {
+  font-size: 32px;
+  margin-left: 20px;
+  font-weight: 700;
+  display: inline-block;
+  /* margin-top:40px; */
+}
+
+.titleview {
+  /*  */
+  line-height: 60px;
+}
+
+.vocanumber {
+  height:30px;
+  width:30%;
+  color:gray;
+  font-size:16px;
+  margin-top:20px;
+  margin-left:20px;
+  display:inline-block;
+}
+
+.username {
+  height:30px;
+  width:40%;
+  color:black;
+  font-size:16px;
+  margin-top:20px;
+  display:inline-block;
+}
+.cardstitle {
+  height:50px;
+  width:80%;
+  font-size:28px;
+  font-family:Arial;
+  font-weight:700;
+  margin-left:20px;
+}

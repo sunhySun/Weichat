@@ -1,78 +1,141 @@
 //index.js
 //获取应用实例
-
-
-const db=wx.cloud.database().collection('test_word')
-let word=""
-let meaning=""
-let id=""
+const app = getApp()
+const db = wx.cloud.database().collection("Cards")
+const user = wx.cloud.database().collection("User")
+const { $Message } = require('../../dist/base/index')
+var util=require('../../utils/util.js')
+let cardname = ''
+let date = ''
+let cardId = 0
+let openid = ''
 Page({
-  data: {
-    result: 'xxx',
-    canAdd: true,
-    canRemove: false
+  data:{
+    item:[],
+    visible1: false,
+    value5: '',
+    cardname:'',
+    // getInput:'',
   },
+  handleOpen1 () {
+    this.setData({
+        visible1: true
+    });
 
-  add_word(event)
-  {
-    word=event.detail.value
+},
+
+  getInput:function(e){
+  cardname = e.detail.value
+  // e.detail.value = ''
   },
-  add_meaning(event)
-  {
-    meaning=event.detail.value
-  },
-
-
-  //添加数据
-  addWord(){
-      db.add({
-        data:{
-          word:word,
-          meaning:meaning
-        },
-        success:function(res){
-          console.log("添加成功",res)
-        }
-      })
-  },
-
-  //查询数据
-  selectword(){
-    var that = this;
-    db.where({
-      word:"apple"
+  handleClose1 () {
+    this.setData({
+      visible1:false
     })
 
-    .get({
-      success:function(res){
-        console.log("查询数据成功",res.data)
-        id=res.data[0]._id
-        that.setData({
-          result:id
+},
+  
+
+
+  onLoad: function () {
+    var that = this
+    that.getOpenid()
+    console.log("hahaha",openid)
+    
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse){
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
         })
       }
-    })
-  },
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
 
-  //删除查询到的指定id的记录
-  delword(){
-    console.log("开始删除",id)
-    db.doc(id).remove({
+    
+setTimeout(function () {
+  db.where({
+    _openid:openid
+  })
+  .get({
+    success:function(res){
+      that.setData({
+        item:res.data,
+      })    
+    }
+  })
+  db.get({
+    success:function(res){
+      cardId = res.data.length
+      // console.log(cardId)
+    }
+  })
+ }, 2000) 
+
+  },
+  add (){
+    var that = this
+    var time = util.formatTime(new Date())
+    db.add({
+     data:{
+      cardName:cardname,
+      cretime:time,
+      knownum:0,
+      wholenum:0,
+      cardId:(cardId+1).toString(),
+     },
       success:function(res){
-        console.log("删除数据成功",res.data)
+      // console.log("添加成功",res)
+    }
+    })
+    this.setData({
+      visible1:false
+    })
+    this.onLoad()
+  },
+
+  getOpenid:function(){
+    wx.cloud.callFunction({
+      name:"getOpenid",
+      success:function(res){
+        openid = res.result.openid
+        console.log("获取openid",res.result.openid)
       }
     })
   },
 
-  renewword(){
-    db.doc(id).update({
-      data:{
-        word:"banana"
-      },
-      success:function(res)
-      {
-        console.log("更新数据成功",res.data)
-      }
+  enter:function(e){
+    var cardnum=''
+    console.log(e)
+    // console.log(cardnum)
+    // wx.navigateTo({
+    //   url: '/pages?id='+cardnum,
+    // })
+  },
+
+  gotoNextPage(event){
+    const id=event.currentTarget.dataset.index;
+    console.log("页面跳转",id,this.data.item[id].cardId)
+    wx.navigateTo({
+      url: '/pages/detailPage/main/main?cardId='+this.data.item[id].cardId,
     })
   }
+
 })

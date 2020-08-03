@@ -1,0 +1,49 @@
+/* pages/detailPage/main.wxss */
+
+/*顶部导航条相关格式*/
+
+.title-bar{
+  width:100%;
+  position: fixed;
+  top:0;
+}
+
+.title-row{
+  background-color:white;
+  height: 60rpx;
+}
+
+.title-color-font{
+  font-size: 15px;
+  color: deepskyblue;
+}
+
+.title-font{
+  font-weight: bold;
+}
+
+.divLine{
+  background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+
+.text-left{
+  text-align: end;
+}
+
+/*正文中用到的样式*/
+.myButton{
+  width: 500rpx;
+  font-size: large;
+  border-radius: 30px;
+  color: white;
+  background-color: dodgerblue;
+  position: fixed;
+  bottom: 60rpx;
+  left: 125rpx;
+}
+
+.word_row{
+  border:1rpx solid gainsboro;
+}

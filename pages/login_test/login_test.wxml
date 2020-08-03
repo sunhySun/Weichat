@@ -1,0 +1,2 @@
+<!--pages/login_test/login_test.wxml-->
+<button bindtap="getopenid">获取openid</button>
