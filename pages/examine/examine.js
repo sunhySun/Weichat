@@ -102,44 +102,14 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  changePage:function(){
-    //动画
-    var that=this
-    console.log("changepage")
-    let animation = wx.createAnimation({
-      duration: 500,
-    });
-    animation.translateX('-150%').translateY('-150%').rotate(60).step();
-    that.setData({
-        animationData: animation.export()
-    });
-    console.log("finish")
-    setTimeout(function(){
-        animation = wx.createAnimation({
-        duration: 0,
-    });
-        animation.translateX('0').translateY('0').rotate(0).step();
-        that.setData({
-          animationData: animation.export()
-        });
-    },500)
-
-      //
-  },
-
   onSelect(event) {
-    this.changePage()
-    setTimeout(function(){
-
-    },1000)
     if(event.detail.res == true){
       let right = this.data.rightAns
       this.setData({
         'rightAns': right + 1
       })
     } else { // 错题集
-      console.log(this.data.words[this.data.serial - 1])
+      console.log(this.data.wrongAns)
       console.log(typeof(this.data.wrongAns))
       this.data.wrongAns.push(this.data.words[this.data.serial - 1])
       this.setData({

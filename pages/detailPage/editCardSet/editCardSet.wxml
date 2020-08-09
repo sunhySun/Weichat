@@ -74,8 +74,8 @@
 <!--顶部导航条-->
 <view class="title-bar">
   <i-row i-class="title-row">
-    <i-col span="10" i-class="col-class">
-      <i-icon type="return" bind:tap="confirm" size="35"></i-icon>
+    <i-col span="8" offset="2" i-class="col-class">
+      <i-icon type="return" bind:tap="confirm"></i-icon>
     </i-col>
     <i-col span="8" i-class="col-class">
       <text class="title-font">{{cardName}}</text>
@@ -92,7 +92,7 @@
   <view class="divLine" />
 </view>
 
-<i-modal title="删除单词" visible="{{delWordVisible}}" actions="{{delWordAction}}"  bind:click="delWordClick">
+<i-modal title="删除卡片集" visible="{{delWordVisible}}" actions="{{delWordAction}}"  bind:click="delWordClick">
   <view>删除后无法恢复</view>
 </i-modal>
 

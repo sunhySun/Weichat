@@ -7,16 +7,13 @@ let know=0
 let count=0
 let wholenum=0
 let cardID=''
-let unknowList=[]
-
 Page({
     /**
      * 页面的初始数据
      */
     back(){
-       console.log("要传的",unknowList)
         wx.navigateTo({
-          url: '../fcresult/result?knowed='+know+'&total='+wholenum+'&cardID='+cardID+'&unknowList='+unknowList
+          url: '../selectmode/selectmode?cardID='+cardID,
         })
     },
     data: {
@@ -28,9 +25,8 @@ Page({
         startX:0, //开始移动时距离左
         endX:0, //结束移动时距离左
         nowPage:0, //当前是第几个个页面
-        xinList:[],
-        unknowlist:[]
-
+        xinList:[
+     ]
    },
    changepage(){
      if(this.data.nowPage >= (this.data.xinList.length - 1)) {
@@ -79,18 +75,7 @@ Page({
 },
 
  unknow(){
-      var that=this
      count++;
-     console.log("unknow",this.data.xinList[this.data.learned - 1])
-     let array=that.data.unknowlist
-     array.push(this.data.xinList[this.data.learned - 1])
-     
-     console.log("then",array)
-     this.setData({
-          'unknowlist': array
-        })
-     console.log(this.data.unknowlist)
-     unknowList = JSON.stringify(array)
      this.changepage();
    },
    //获取卡片集的单词数

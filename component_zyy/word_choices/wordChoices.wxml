@@ -1,12 +1,12 @@
-<!--component_zyy/word_choices/wordChoices.wxml hover-class="{{item.res === true ? 'right' : 'wrong'}}"-->
-<view >
+<!--component_zyy/word_choices/wordChoices.wxml-->
+<view>
   <view class="wordBox">
     <text class="word">{{word}}</text>
   </view>
   <view class="btn-contianer">
-    <view class="btn-box" wx:for="{{choices}}" wx:key="item" >
-      <button class="{{item.class_btn}}" 
-            data-value="{{item.value}}" data-res="{{item.res}}" data-index="{{index}}" catchtouchstart="btnClick">
+    <view class="btn-box" wx:for="{{choices}}" wx:key="item">
+      <button class="btn" hover-class="{{item.res === true ? 'right' : 'wrong'}}"
+      data-value="{{item.value}}" data-res="{{item.res}}" catchtouchstart="btnClick">
         {{item.value}}
       </button>
     </view>

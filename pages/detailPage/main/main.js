@@ -147,13 +147,8 @@ Page({
         that.setData({
       delCardVisible:false
     });
-      wx.switchTab({
-        url: '/pages/index/index',
-        success: function (e) {  
-          var page = getCurrentPages().pop();  
-          if (page == undefined || page == null) return;  
-          page.onLoad();  
-        }  
+      wx.navigateBack({
+        delta: 1,
       })
       }
     })    
@@ -175,13 +170,8 @@ Page({
   },
 
   returnLastPage(event){
-    wx.switchTab({
-      url: '/pages/index/index',
-      success: function (e) {  
-        var page = getCurrentPages().pop();  
-        if (page == undefined || page == null) return;  
-        page.onLoad();  
-      }  
+    wx.navigateBack({
+      delta: 1,
     })
   }
 })

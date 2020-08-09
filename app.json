@@ -9,9 +9,8 @@
     "pages/detailPage/editWord/editWord",
     "pages/detailPage/addWord/addWord",
     "pages/examine/examine",
-    "pages/result/result","pages/test_animation/test_animation",
+    "pages/result/result",
     "pages/logs/logs"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
