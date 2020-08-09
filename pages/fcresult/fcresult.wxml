@@ -1,4 +1,4 @@
-<!--pages/result/result.wxml-->
+<!--pages/fcresult/fcresult.wxml-->
 <view>
   <navbar pageName="复习结果" cardId="{{cardId}}"  />
   <view class="icon-container">

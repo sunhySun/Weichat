@@ -1,4 +1,3 @@
-// pages/flashcard/flashcard.js
 const Cards=wx.cloud.database().collection('Cards')
 const Words=wx.cloud.database().collection('Words')
 const { $Message } = require('../../dist/base/index')
@@ -31,5 +30,3 @@ Page({
    
  
 })
-            
-

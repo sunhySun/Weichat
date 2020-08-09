@@ -7,6 +7,5 @@
     "i-cell": "../../dist/cell/index",
     "navbar": "../../component_zyy/navbar"
   },
-  "navigationBarTitleText": "结果",
   "navigationStyle": "custom"
 }

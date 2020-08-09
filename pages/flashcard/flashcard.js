@@ -16,7 +16,7 @@ Page({
     back(){
        console.log("要传的",unknowList)
         wx.navigateTo({
-          url: '../fcresult/result?knowed='+know+'&total='+wholenum+'&cardID='+cardID+'&unknowList='+unknowList
+          url: '../fcresult/fcresult?knowed='+know+'&total='+wholenum+'&cardID='+cardID+'&unknowList='+unknowList
         })
     },
     data: {

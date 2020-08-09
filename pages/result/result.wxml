@@ -14,3 +14,4 @@
       <i-cell wx:for="{{wrongWords}}" wx:key="item" title="{{item.word}}" label="{{item.meaning}}" />
     </i-cell-group>
 </view>
+
