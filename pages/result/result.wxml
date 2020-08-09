@@ -1,0 +1,16 @@
+<!--pages/result/result.wxml-->
+<view>
+  <navbar pageName="复习结果" cardId="{{cardId}}"  />
+  <view class="icon-container">
+    <view class="icon-box">
+      <i-icon type="right" color="#f8f8f9" size="93" />
+    </view>
+  </view>
+  <view class="result-text">
+    <text>正确率:{{correct}}/{{total}}</text>
+  </view>
+    <i-divider content="本次错题" />
+    <i-cell-group id="wrong_ans">
+      <i-cell wx:for="{{wrongWords}}" wx:key="item" title="{{item.word}}" label="{{item.meaning}}" />
+    </i-cell-group>
+</view>

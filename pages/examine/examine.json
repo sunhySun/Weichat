@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "back": "../../component_zyy/back/back",
+    "progress": "../../component_zyy/progress/progress",
+    "word-choice": "../../component_zyy/word_choices/wordChoices",
+    "navbar": "../../component_zyy/navbar/index"
+  },
+  "navigationStyle": "custom"
+}

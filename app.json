@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/index/index","pages/detailPage/main/main","pages/login_test/login_test",
+    "pages/welcome/welcome",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/detailPage/main/main",
+    "pages/login_test/login_test",
     "pages/detailPage/editCardSet/editCardSet",
-    
-    "pages/logs/logs",
     "pages/detailPage/editWord/editWord",
     "pages/detailPage/addWord/addWord",
-    "pages/welcome/welcome",
-    "pages/my/my"
-    
+    "pages/examine/examine",
+    "pages/result/result",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

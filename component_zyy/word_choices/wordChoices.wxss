@@ -1,0 +1,49 @@
+/* component_zyy/word_choices/wordChoices.wxss */
+.word {
+  color: #1c2438;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.wordBox {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  /* background-color: aqua; */
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.btn-container {
+  margin-top: 80px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+  width: 100%
+}
+
+.btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 300px;
+  height: 60px;
+  color: #495060;
+  font-size: 15px;
+  background-color: #dddee1;
+  margin-bottom: 15px;
+  border-radius: 98rpx;
+  padding: 30px;
+}
+.right {
+  background-color: #00baad !important; 
+  color: #fff;
+}
+.wrong {
+  background-color: #ff6347 !important;
+  color: #fff;
+}

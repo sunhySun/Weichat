@@ -17,7 +17,7 @@
     <!-- <i-message id="message" /> -->
     
     
-    <view class = "learningSets" wx:for="{{item}}" wx:for-item="item" >
+    <view class = "learningSets" wx:for="{{item}}" wx:for-item="item" wx:key="item" >
     <view class = "tab" >
       <view class = "vocanumber">{{item.wholenum}}个词语  |</view>
       <view class = "username">

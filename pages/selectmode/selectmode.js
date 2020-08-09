@@ -26,8 +26,12 @@ Page({
         // })
     },
     test(){
-        wx.redirectTo({
-            url: ''//跳转至测试页
+        // wx.redirectTo({
+        //     // 测试页
+        //     url: '../examine/examine'
+        // })
+        wx.navigateTo({
+          url: '../examine/examine?cardID='+cardId
         })
     },
     onLoad:function(options){

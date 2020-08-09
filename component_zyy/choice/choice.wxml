@@ -1,0 +1,5 @@
+<!--component_zyy/choice/choice.wxml-->
+<view class="btn-box">
+  <button class="btn" shape="circle" size="large" hover-class="hover wrong" hover-stay-time="2000"
+  bindtap="{{this.triggerEvent('tap')}}">{{content}}</button>
+</view>

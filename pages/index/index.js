@@ -9,6 +9,13 @@ let cardname = ''
 let date = ''
 let cardId = 0
 let openid = ''
+
+
+// const db=wx.cloud.database().collection('test_word')
+let word=""
+let meaning=""
+let id=""
+
 Page({
   data:{
     item:[],
@@ -112,13 +119,14 @@ setTimeout(function () {
   },
 
   getOpenid:function(){
-    wx.cloud.callFunction({
-      name:"getOpenid",
-      success:function(res){
-        openid = res.result.openid
-        console.log("获取openid",res.result.openid)
-      }
-    })
+    // wx.cloud.callFunction({
+    //   name:"getOpenid",
+    //   success:function(res){
+    //     openid = res.result.openid
+    //     console.log("获取openid",res.result.openid)
+    //   }
+    // })
+    openid = app.globalData.openId
   },
 
   enter:function(e){

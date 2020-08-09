@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "choice": "../choice/choice"
+  }
+}

@@ -1,0 +1,10 @@
+<!-- 卡片集测试页面 -->
+<view>
+  <navbar pageName="测试" />
+  <view>
+    <progress serial="{{serial}}" total="{{total}}" />
+  </view>
+  <view>
+    <word-choice total="{{total}}" words="{{words}}" bind:selectAns="onSelect" bind:finish="onFinish" />
+  </view>
+</view>

@@ -1,0 +1,13 @@
+/* component_zyy/progress/progress.wxss */
+.progress {
+  display: flex;
+  align-items: center;
+  /* justify-items: center; */
+  justify-content: center;
+  width: 100%;
+  /* background-color: aqua; */
+  text-align: center;
+  margin-top: 20px;
+  color: #505050;
+  font-size: 18px;
+}

@@ -1,0 +1,13 @@
+<!--component_zyy/navbar/index.wxml-->
+<!-- 自定义顶部导航栏 -->
+<view class="container" style="height:{{height}}px; padding-left:{{widthLeft}}px">
+  <view class="btn item-center" style="margin-top:{{menuTop}}px; width:{{width}}px; height:{{menuHeight}}px">
+    <view class="btn item-center" style="width:{{width / 2}}px" bindtap="goBack"> 
+      <i-icon type="return" size="23"/>
+    </view>
+    <view class="btn item-center" style="width:{{width / 2}}px" bindtap="goHome">
+       <i-icon type="homepage_fill" size="23" />
+    </view>
+  </view>
+  <view class="title item-center" style="margin-top:{{statusBarHeight}}px; width:{{titleWidth}}px">{{pageName}}</view>
+</view>

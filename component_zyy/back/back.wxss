@@ -1,0 +1,11 @@
+/* component_zyy/back/back.wxss */
+.back {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #505050;
+}
+
+.logo {
+  size: 20px;
+  color: #505050;
+}

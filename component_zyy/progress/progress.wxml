@@ -1,0 +1,4 @@
+<!--component_zyy/progress/progress.wxml-->
+<view class="progress">
+    <text>{{serial}} / {{total}}</text>
+</view>

@@ -1,0 +1,5 @@
+<!--component_zyy/back/back.wxml-->
+<view class="back">
+  <i-icon type="return" size="20"/>
+  返回
+</view>

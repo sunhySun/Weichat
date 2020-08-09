@@ -1,2 +1,23 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view>
+  <!-- <view class="head">
+    <view style="margin-top: 0px">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view> -->
+  <view class="info-container">
+    <view class="header">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="name">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+  <text class="title">近期学习情况</text>
+  <view class="ec-box">
+    <ec-canvas id="my-echart" ec="{{ec}}" canvas-id="mychart" />
+  </view>
+</view>
