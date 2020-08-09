@@ -10,16 +10,18 @@
 
 .title-row{
   background-color:white;
-  height: 60rpx;
+  height: 80rpx;
 }
 
 .title-color-font{
   font-size: 15px;
   color: deepskyblue;
+  font-size: 18px;
 }
 
 .title-font{
   font-weight: bold;
+  font-size: 18px;
 }
 
 .divLine{

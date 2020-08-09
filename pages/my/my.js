@@ -172,14 +172,14 @@ Page({
         type: 'line',
         smooth: true,
         // data: [15, 2, 30, 16, 10, 0, 0]
-        data: total
+        data: learned
       },
       {
         name: '学习单词数',
         type: 'line',
         smooth: true,
         // data: [15, 2, 30, 16, 10, 0, 0]
-        data: learned
+        data: total
       }
     ]
     }

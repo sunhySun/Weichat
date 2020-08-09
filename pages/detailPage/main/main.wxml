@@ -68,8 +68,8 @@
 <!--顶部导航条-->
 <view class="title-bar">
   <i-row i-class="title-row">
-    <i-col span="8" offset="2" i-class="col-class">
-      <i-icon type="return" bind:tap="returnLastPage"></i-icon>
+    <i-col span="10" i-class="col-class">
+      <i-icon type="return" bind:tap="returnLastPage" size="35"></i-icon>
     </i-col>
     <i-col span="8" i-class="col-class">
       <text class="title-font">{{cardName}}</text>

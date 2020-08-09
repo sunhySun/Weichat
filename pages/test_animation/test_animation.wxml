@@ -1,0 +1,15 @@
+<!--pages/test_animation/test_animation.wxml-->
+    <view >
+    <button bindtap="click">动画</button>
+         
+ <view class="aa" bindtouchstart='touchstart' bindtouchend="touchend" animation="{{animationData}}">
+            <view class='card-container'>hello</view>
+        </view>
+        <!--
+            <view class="aa" animation="{{id === 0 ? animationData : ''}}" bindtouchstart="" bindtouchend="">
+            <text>helloe</text></view>
+        wx:for='{{cardInfoList}}' wx:key="unique" wx:for-index="id" wx:for-item="item"
+
+        -->
+       
+    </view>

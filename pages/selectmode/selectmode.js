@@ -13,8 +13,8 @@ Page({
         // wx.redirectTo({
         //     url: '/pages/detailPage/main/main'//返回卡片集页面
         // })
-        wx.navigateBack({
-          delta: 1,
+        wx.navigateTo({
+            url: '/pages/detailPage/main/main?cardId='+cardId//返回卡片集页面
         })
     },
     flashcard(){

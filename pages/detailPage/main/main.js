@@ -147,8 +147,13 @@ Page({
         that.setData({
       delCardVisible:false
     });
-      wx.navigateBack({
-        delta: 1,
+      wx.switchTab({
+        url: '/pages/index/index',
+        success: function (e) {  
+          var page = getCurrentPages().pop();  
+          if (page == undefined || page == null) return;  
+          page.onLoad();  
+        }  
       })
       }
     })    
@@ -170,8 +175,13 @@ Page({
   },
 
   returnLastPage(event){
-    wx.navigateBack({
-      delta: 1,
+    wx.switchTab({
+      url: '/pages/index/index',
+      success: function (e) {  
+        var page = getCurrentPages().pop();  
+        if (page == undefined || page == null) return;  
+        page.onLoad();  
+      }  
     })
   }
 })

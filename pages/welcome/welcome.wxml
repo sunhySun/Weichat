@@ -2,5 +2,5 @@
 <!-- <text>pages/welcome/welcome.wxml</text> -->
 <view class = "container" style="margin-top:80px;margin-bottom:20px">
 <image src="../images/wordcards.png" style="height:100px;width:100%;"></image>
-<image src = "../images/developer.PNG" style="height:200px;width:120px;float:right"></image>
+<image src = "../images/developer.png" style="height:200px;width:120px;float:right"></image>
 </view>
